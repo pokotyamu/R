@@ -1,0 +1,8 @@
+
+
+library(“RMySQL”)
+md <- dbDriver(“MySQL”)
+dbc <- dbConnect(md,dbname=“pop”,user=“root”,password=“root”)
+
+
+tmp <- dbGetQuery(dbc,"select * from psp_sample;")
